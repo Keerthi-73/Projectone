@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>welcome to Forest Theme - Nature Theme</title>
+  <style>
+    :root {
+      --forest-green: #2c5f2d;
+      --soft-green: #97bc62;
+      --earth-brown: #a1a17d;
+      --sky-blue: #d3eecb;
+      --light-bg: #f7fff7;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--forest-green);
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--forest-green);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo {
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .nav-links a:hover {
+      color: var(--sky-blue);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, var(--forest-green), var(--soft-green));
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 5px solid var(--earth-brown);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--soft-green);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 0.7rem 1.5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: var(--forest-green);
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+    }
+
+    .feature-box {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .bg-light {
+      background-color: #e8f5e9;
+    }
+
+    .mission {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .mission img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: var(--forest-green);
+      color: white;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    /* Center headings and paragraphs in Features and Contact Us */
+    #features > div.text-center,
+    #contact > div.text-center {
+      text-align: center;
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links a {
+        margin: 0.5rem 0;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+      }
+
+      .mission {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mission div {
+        width: 100%;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      .contact-form {
+        padding: 0 1rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        font-size: 1rem;
+        padding: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      .logo-title {
+        font-size: 1rem;
+      }
+
+      .btn {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+      }
+
+      .feature-box {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-title">
+      <span class="logo">🌲</span>
+      <span class="title">Forest Theme</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <h1>Reconnect with Nature</h1>
+    <p>Explore the harmony of the forest with a beautifully minimal and eco-conscious web theme.</p>
+    <a href="#features" class="btn">Learn More</a>
+  </header>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="text-center">
+      <h2>Features</h2>
+      <p>Simplicity and sustainability, beautifully balanced</p>
+    </div>
+    <div class="features">
+      <div class="feature-box">
+        <h4>Eco Friendly Design</h4>
+        <p>Subtle earthy tones and minimalistic layouts that reflect the calm of the forest.</p>
+      </div>
+      <div class="feature-box">
+        <h4>Fully Responsive</h4>
+        <p>Optimized to look stunning on any device – from mobile to desktop.</p>
+      </div>
+      <div class="feature-box">
+        <h4>Easy to Customize</h4>
+        <p>Clean and semantic code that makes customization a breeze for developers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Mission -->
+  <section id="mission" class="bg-light">
+    <div class="mission">
+      <div style="flex: 1;">
+        <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64" alt="Forest" />
+      </div>
+      <div style="flex: 1;">
+        <h2>Our Mission</h2>
+        <p>We believe digital experiences should be as sustainable as the natural world. Our Forest Theme is built with simplicity, efficiency, and beauty in mind to reduce digital waste and celebrate the Earth.</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="text-center">
+      <h2>Contact Us</h2>
+      <p>Have a question or want to collaborate?</p>
+    </div>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/xyzjkovb" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Forest Theme. Crafted with 🌿 by NatureLovers.</p>
+  </footer>
+</body>
+</html>
